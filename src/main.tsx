@@ -6,6 +6,8 @@ import UsersPage from "./page/UsersPage.tsx";
 import PostsPage from "./page/PostsPage.tsx";
 import CommentsPage from "./page/CommentsPage.tsx";
 import MainRender from "./render/MainRender.tsx";
+import UsersComponentJsonplaseholder from "./componens/users/usersJsonplaceholder/UsersComponentJsonplaseholder.tsx";
+import UsersComponentDummyjson from "./componens/users/usersDummyjson/UsersComponentDummyjson.tsx";
 
 
 const router = createBrowserRouter([
@@ -14,8 +16,8 @@ const router = createBrowserRouter([
         path: "/", element: <MainRender/>, children:[
             {path: "main", element: <MainPage/>},
             {path: "users/", element: <UsersPage/>, children:[
-                    {path: "jsonplaceholder", element: <div>user-jsonplaceholder</div>},
-                    {path: "dummyjson", element: <div>user-dummyjson</div>}
+                    {path: "jsonplaceholder", element: <UsersComponentJsonplaseholder/>},
+                    {path: "dummyjson", element: <UsersComponentDummyjson/>}
 
                 ]
             },
